@@ -45,6 +45,7 @@
   "encoding": {
     "x": {
       "field": "a",
+      "title": "letters",
       "type": "nominal",
       "axis": {
         "labelAngle": 0
@@ -52,6 +53,7 @@
     },
     "y": {
       "field": "b",
+      "title": "Numbers",
       "type": "quantitative"
     }
   },
