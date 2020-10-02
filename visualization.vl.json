@@ -47,14 +47,15 @@
       "field": "a",
       "title": "letters",
       "type": "nominal",
+      "title": "letters",
       "axis": {
         "labelAngle": 0
       }
     },
     "y": {
       "field": "b",
-      "title": "Numbers",
-      "type": "quantitative"
+      "type": "quantitative",
+      "title": "Numbers"
     }
   },
   "config": {}
