@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 900,
+  "height": 500,
+  "title": "VIC CAR CRASH DATA",
+  "projection": {"type": "equirectangular"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://rodankaka.github.io/FIT3179/VIC_LGA_POLYGON_SHP.topojson",
+        "format": {"type": "topojson", "feature": "VIC_LGA_POLYGON_SHP"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Crash%20Statistics%20Victoria-V3.csv"
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"}
+      },
+      "layer": [
+        {
+          "mark": {"type": "circle", "tooltip": {"content": "data"}},
+          "encoding": {
+            "size": {
+              "field": "Local Government Area",
+              "type": "nominal",
+              "scale": {"domain": []}
+            },
+            "color": {
+              "field": "Local Government Area",
+              "type": "nominal",
+              "scale": {"scheme": "reds"}
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "config": {}
+}
