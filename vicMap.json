@@ -25,9 +25,9 @@
           "mark": {
             "type": "circle",
             "tooltip": {"content": "data"},
-            "color": "#ff6666",
+            "color": "#ff8080",
             "opacity": 1,
-            "size": 2
+            "size": 4
           },
           "encoding": {}
         }
