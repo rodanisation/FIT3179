@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Hit and Run Accidents Breakdown ",
+  "width": 250,
+  "height": 250,
+  "data": {
+    "values": [
+      {"Hit and Run Accident": "Yes (6%)", "value": 2379},
+      {"Hit and Run Accident": "No (94%)", "value": 40762}
+    ]
+  },
+  "mark": {"type": "arc", "outerRadius": 90},
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative"},
+    "color": {
+      "field": "Hit and Run Accident",
+      "type": "nominal",
+      "title": "Hit and Run Breakdown"
+    }
+  },
+  "view": {"stroke": null},
+  "config": {}
+}

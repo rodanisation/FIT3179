@@ -1,0 +1,26 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Accident Severity Distribution",
+  "width": 400,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Severity%20Type.csv"
+  },
+  "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
+  "encoding": {
+    "x": {
+      "timeUnit": "month",
+      "field": "Accident Date",
+      "title": "Month",
+      "type": "ordinal"
+    },
+    "y": {
+      "aggregate": "count",
+      "title": "Number of Accidents",
+      "scale": {"domain": [0, 4000]},
+      "axis": {"grid": false}
+    },
+    "color": {"field": "Severity", "title": "Severity Type"}
+  },
+  "config": {}
+}

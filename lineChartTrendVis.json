@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Accident Count Trend by Year",
+  "width": 1000,
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Monthly%20Accident%20Count.csv"
+  },
+  "mark": {
+    "type": "line",
+    "interpolate": "monotone",
+    "tooltip": {"content": "data"}
+  },
+  "encoding": {
+    "x": {"field": "Accident Date", "type": "temporal"},
+    "y": {
+      "field": "Accident Count",
+      "type": "quantitative",
+      "title": "Number of Accidents"
+    },
+    "color": {
+      "timeUnit": "year",
+      "type": "nominal",
+      "field": "Accident Date",
+      "title": "Year"
+    }
+  },
+  "config": {}
+}

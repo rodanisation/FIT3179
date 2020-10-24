@@ -1,0 +1,26 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Type of Accidents ",
+  "data": {
+    "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Crash%20Statistics%20Victoria-V3.csv"
+  },
+  "width": 400,
+  "height": 300,
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "aggregate": "count",
+      "field": "Accident Type",
+      "title": "Number of Accidents",
+      "sort": "ascending"
+    },
+    "y": {
+      "field": "Accident Type",
+      "title": " ",
+      "type": "nominal",
+      "sort": "-x"
+    },
+    "color": {"field": "Accident Type"}
+  },
+  "config": {}
+}

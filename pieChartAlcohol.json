@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Alcohol Check at the Time of Accident Breakdown",
+  "width": 250,
+  "height": 250,
+  "data": {
+    "values": [
+      {"Alcohol Check": "Yes (3%)", "value": 1443},
+      {"Alcohol Check": "No (97%)", "value": 41698}
+    ]
+  },
+  "mark": {"type": "arc", "outerRadius": 90},
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative"},
+    "color": {"field": "Alcohol Check", "type": "nominal"}
+  },
+  "view": {"stroke": null},
+  "config": {}
+}

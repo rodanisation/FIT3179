@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Crash%20Statistics%20Victoria-V3.csv"
+  },
+  "width": 1000,
+  "height": 600,
+  "encoding": {
+    "x": {"timeUnit": "month", "field": "Accident Date"},
+    "y": {"aggregate": "sum", "field": "Fatality", "scale": {"domain": [0, 50]}}
+  },
+  "layer": [
+    {
+      "selection": {"brush": {"type": "interval", "encodings": ["x"]}},
+      "mark": "area"
+    },
+    {
+      "transform": [{"filter": {"selection": "brush"}}],
+      "mark": {"type": "area", "color": "#ff6666", "opacity": 1}
+    }
+  ],
+  "config": {}
+}
