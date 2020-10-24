@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Accident Severity Distribution",
-  "width": 400,
-  "height": 400,
+  "width": 1000,
+  "height": 600,
   "data": {
     "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Severity%20Type.csv"
   },
