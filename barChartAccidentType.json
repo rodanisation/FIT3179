@@ -4,15 +4,21 @@
   "data": {
     "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Crash%20Statistics%20Victoria-V3.csv"
   },
-  "width": 400,
-  "height": 300,
-  "mark": "bar",
+  "width": 1000,
+  "height": 600,
+
+  "mark": {"type": "bar", "tooltip": {"content": "data"}},
+  
   "encoding": {
     "x": {
       "aggregate": "count",
       "field": "Accident Type",
       "title": "Number of Accidents",
-      "sort": "ascending"
+      "sort": "ascending", 
+      "scale":{
+     "domain":[0, 30000]
+   }
+
     },
     "y": {
       "field": "Accident Type",
