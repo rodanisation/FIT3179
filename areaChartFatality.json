@@ -16,7 +16,7 @@
     },
     {
       "transform": [{"filter": {"selection": "brush"}}],
-      "mark": {"type": "area", "color": "#ff6666", "opacity": 1}
+      "mark": {"type": "area", "color": "#ff8080", "opacity": 1}
     }
   ],
   "config": {}
