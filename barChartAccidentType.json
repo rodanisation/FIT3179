@@ -4,7 +4,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Crash%20Statistics%20Victoria-V3.csv"
   },
- "width": 700,
+ "width": 600,
   "height": 400,
 
   "mark": {"type": "bar", "tooltip": {"content": "data"}},
