@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 800,
+  "width": 900,
   "height": 600,
   "title": "VIC CAR CRASH DATA",
   "projection": {"type": "equirectangular"},
