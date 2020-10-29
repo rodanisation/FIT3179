@@ -1,36 +1,35 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": " ",
-  "width": 800,
-  "height": 600,
+  "title": "  ",
   "data": {
-    "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Severity%20Type.csv"
+    "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Crash%20Statistics%20Victoria-V3.csv"
   },
-  "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
+  "width": 600,
+  "height": 400,
+  "mark": {"type": "bar", "tooltip": {"content": "data"}},
   "encoding": {
     "x": {
-      "timeUnit": "month",
-      "field": "Accident Date",
-      "title": "Month",
-      "type": "ordinal"
+      "aggregate": "count",
+      "field": "Accident Type",
+      "title": "Number of Accidents",
+      "sort": "ascending",
+      "scale": {"domain": [0, 31000]},
+      "axis": {"tickCount": 11}
+      
     },
     "y": {
-      "aggregate": "count",
-      "title": "Number of Accidents",
-      "scale": {"domain": [0, 4100]},
-      "axis": {"grid": false}
+      "field": "Accident Type",
+      "title": " ",
+      "type": "nominal",
+      "sort": "-x"
     },
 
+        "tooltip": [
+          {"field": "Accident Type", "type": "nominal"},
+          {"field": "__count", "type": "quantitative", "title": "Number of Accidents"}
+        ],
 
- "tooltip": [
-
-   {"field":"Severity", "type": "nominal"},
-   {"field": "Accident Date", "type": "temporal"},
-   {"field": "__count", "type": "quantitative", "title": "Number of Accidents"}
- ],
-
-
-    "color": {"field": "Severity", "title": "Severity Type"}
+    "color": {"field": "Accident Type"}
   },
   "config": {}
 }
