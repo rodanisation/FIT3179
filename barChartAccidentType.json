@@ -12,23 +12,26 @@
       "aggregate": "count",
       "field": "Accident Type",
       "title": "Number of Accidents",
+      "type": "quantitative",
       "sort": "ascending",
-      "scale": {"domain": [0, 31000]},
-      "axis": {"tickCount": 11}
-      
+      "scale": {"nice":false},
+      "axis": {"tickCount": 9}
     },
     "y": {
       "field": "Accident Type",
       "title": " ",
       "type": "nominal",
       "sort": "-x"
+      
     },
-
-        "tooltip": [
-          {"field": "Accident Type", "type": "nominal"},
-          {"field": "__count", "type": "quantitative", "title": "Number of Accidents"}
-        ],
-
+    "tooltip": [
+      {"field": "Accident Type", "type": "nominal"},
+      {
+        "field": "__count",
+        "type": "quantitative",
+        "title": "Number of Accidents"
+      }
+    ],
     "color": {"field": "Accident Type"}
   },
   "config": {}
