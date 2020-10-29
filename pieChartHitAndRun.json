@@ -15,7 +15,7 @@
     "color": {
       "field": "Hit and Run Accident",
       "type": "nominal",
-      "title": "Hit and Run Breakdown"
+      "title": "Hit and Run Check"
     }
   },
   "view": {"stroke": null},
