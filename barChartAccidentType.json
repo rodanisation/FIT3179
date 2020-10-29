@@ -15,7 +15,8 @@
       "type": "quantitative",
       "sort": "ascending",
       "scale": {"nice":false},
-      "axis": {"tickCount": 9}
+      "axis": {"tickCount": 9, "grid": false}
+      
     },
     "y": {
       "field": "Accident Type",
