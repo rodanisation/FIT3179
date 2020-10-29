@@ -8,8 +8,7 @@
   },
   "mark": {
     "type": "line",
-    "interpolate": "monotone",
-    "tooltip": {"content": "data"}
+    "interpolate": "monotone"
   },
   "encoding": {
     "x": {"field": "Accident Date", "type": "temporal"},
@@ -18,6 +17,12 @@
       "type": "quantitative",
       "title": "Number of Accidents"
     },
+
+     "tooltip": [
+          {"field": "Accident Date", "type": "temporal"},
+          {"field": "Accident Count", "type": "quantitative", "title": "Number of Accidents"}
+          
+        ],
     "color": {
       "timeUnit": "year",
       "type": "nominal",
