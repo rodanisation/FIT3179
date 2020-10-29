@@ -3,22 +3,57 @@
   "data": {
     "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Crash%20Statistics%20Victoria-V3.csv"
   },
-  "title":" ",
+  "title": " ",
   "width": 800,
   "height": 600,
   "encoding": {
     "x": {"timeUnit": "month", "field": "Accident Date", "title": "Month"},
-    "y": {"aggregate": "sum", "field": "Fatality", "scale": {"domain": [0, 45]}, "title":"Number of Deaths"}
+    "y": {
+      "aggregate": "sum",
+      "field": "Fatality",
+      "scale": {"domain": [0, 45]},
+      "title": "Number of Deaths"
+    },
+
+
+    "tooltip": [
+          {"field": "sum_Fatality", "type": "quantitative", "title":"Number of Deaths"}
+          
+        ]
+    
+
+
+
+
+
+
   },
+
+
+
+  
   "layer": [
     {
       "selection": {"brush": {"type": "interval", "encodings": ["x"]}},
-      "mark": "area"
+      "mark": {"type": "area"}
     },
+
+
+
+
+
+    
     {
       "transform": [{"filter": {"selection": "brush"}}],
       "mark": {"type": "area", "color": "#ff8080", "opacity": 1}
     }
+
+
+
+
+
+
+    
   ],
   "config": {}
 }
