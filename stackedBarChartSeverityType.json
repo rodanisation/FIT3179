@@ -17,9 +17,18 @@
     "y": {
       "aggregate": "count",
       "title": "Number of Accidents",
-      "scale": {"domain": [0, 4000]},
+      "scale": {"domain": [0, 4100]},
       "axis": {"grid": false}
     },
+    "tooltip": [
+      {"field": "Severity", "type": "nominal"},
+      {"field": "Accident Date", "type": "temporal"},
+      {
+        "field": "__count",
+        "type": "quantitative",
+        "title": "Number of Accidents"
+      }
+    ],
     "color": {"field": "Severity", "title": "Severity Type"}
   },
   "config": {}
