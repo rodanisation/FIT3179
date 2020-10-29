@@ -17,8 +17,9 @@
     "y": {
       "aggregate": "count",
       "title": "Number of Accidents",
-      "scale": {"domain": [0, 4100]},
-      "axis": {"grid": false}
+      
+      "axis": {"grid": false},
+      "scale": {"nice":false}
     },
     "tooltip": [
       {"field": "Severity", "type": "nominal"},
