@@ -4,6 +4,17 @@
   "height": 550,
   "title": " ",
   "projection": {"type": "equirectangular"},
+  "params": [
+        {
+          "name": "Year_selection",
+          "bind": {
+            "input": "select",
+            "options": [null, "2015", "2016", "2017", "2018"],
+            "labels": ["Show All", "2015", "2016", "2017", "2018"],
+            "name": "Year Selection: "
+          }
+        }
+      ],
   "layer": [
     {
       "data": {
@@ -14,8 +25,14 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Crash%20Statistics%20Victoria-V3.csv"
+        "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Crash%20Statistics%20Victoria-V3-map.csv"
       },
+      
+      "transform": [
+        {
+          "filter": "Year_selection == null || datum.Year == Year_selection"
+        }
+      ],
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"}
