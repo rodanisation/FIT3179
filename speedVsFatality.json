@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": " ",
+  "width": 900,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/rodankaka/FIT3179/master-branch/Speed%20vs%20Fatality.csv"
+  },
+  "mark": {
+    "type": "area",
+    "line": true,
+    "point": true,
+    "color": "#ff8080",
+    "opacity": 0.6
+  },
+  "encoding": {
+    "x": {
+      "field": "Speed Zone (km/hr)",
+      "type": "quantitative",
+      "axis": {"tickCount": 7},
+      "title": "Speed Zone (Km/hr)"
+    },
+    "y": {
+      "field": "Fatality",
+      "type": "quantitative",
+      "title": "Number of Deaths",
+      "axis": {"grid": false},
+      "scale": {"nice": false}
+    },
+    "tooltip": [{"field": "Speed Zone (km/hr)"}, {"field": "Fatality"}]
+  },
+  "config": {}
+}
