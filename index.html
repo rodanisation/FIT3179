@@ -361,7 +361,7 @@
               <section class="post">
                     <header class="post-header">
                         
-                           <h1 class="content-subhead">finally, to explore fatality Rates</h1>
+                           <h1 class="content-subhead">Then, a look at exploring fatality Rates</h1>
 
                       <!--  <img width="48" height="48" alt="Andrew Wooldridge&#x27;s avatar" class="post-avatar" src="/img/common/andrew-avatar.png"> -->
 
@@ -385,7 +385,7 @@
 
                     <div class="post-description">
                         <p>
-                            The final step is to analyse and correlate reported accidents and number of deaths. While the aim is to have zero deaths, it is unfortunately nearly impossible to achieve.
+                            At this stage, we analyse and correlate reported accidents and number of deaths. While the aim is to have zero deaths, it is unfortunately nearly impossible to achieve.
                             Therefore, relative to the number of reported accidents, the number of deaths per month can be considered moderate but authorities should aim to reduce it.
                         
                         </p>
@@ -393,6 +393,55 @@
                 </section>
             
                         <!-- end of 6th vis -->
+            
+            
+            
+            
+            
+            <!-- start of vis 7 -->
+            
+              <section class="post">
+                    <header class="post-header">
+                        
+                           <h1 class="content-subhead">finally, to explore correlation between fatality rates and speed zone</h1>
+
+                      <!--  <img width="48" height="48" alt="Andrew Wooldridge&#x27;s avatar" class="post-avatar" src="/img/common/andrew-avatar.png"> -->
+
+                        <h2 class="post-title">Fatality and Speed Zone Correlation</h2>
+
+                        <p class="post-meta">
+                          <!--  By <a class="post-author" href="#">Andrew Wooldridge</a> under <a class="post-category post-category-yui" href="#">YUI</a> -->
+                        </p>
+                        
+                           <div id="speedVsFatalityVis"></div>
+  
+                                    <script type="text/javascript">
+                                             var spec = "https://rodankaka.github.io/FIT3179/speedVsFatality.json";
+                                             vegaEmbed('#speedVsFatalityVis', spec).then(function(result) {
+                                           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                                                }).catch(console.error);
+                                    </script>
+                        
+                        
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            The final step is to investigate the correlation between the number of deaths against the speed zone of the reported accidents. Evidently, the 100 km/hr zone has nearly as much as 60 and 80 km/hr speed zones combined,
+                            a conclusion can be drawn that the most dangerous areas are major highways where the speed zone is 100 km/hr. Action should be taken to initially address the high number of fatalities in this particular speed zone
+                            before the others.
+                        
+                        </p>
+                    </div>
+                </section>
+            
+            
+            
+            
+            <!-- end of vis 7 -->
+            
+            
+            
             
             
             </div>
