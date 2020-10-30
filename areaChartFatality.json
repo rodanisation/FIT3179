@@ -5,57 +5,37 @@
   },
   "title": " ",
   "width": 900,
-  "height": 600,
+  "height": 300,
   "encoding": {
-    "x": {"timeUnit": "month", "field": "Accident Date", "title": "Month", "axis":{"grid": false}},
+    "x": {
+      "timeUnit": "month",
+      "field": "Accident Date",
+      "title": "Month",
+      "axis": {"grid": false}
+    },
     "y": {
       "aggregate": "sum",
       "field": "Fatality",
-       "scale": {"nice": false, "domain": [0,42]},
-       
-      
+      "scale": {"nice": false, "domain": [0, 42]},
       "title": "Number of Deaths",
-      "axis":{"tickCount":8, "grid": false}
+      "axis": {"tickCount": 8, "grid": false}
     },
-
-
     "tooltip": [
-          {"field": "sum_Fatality", "type": "quantitative", "title":"Number of Deaths"}
-          
-        ]
-    
-
-
-
-
-
-
+      {
+        "field": "sum_Fatality",
+        "type": "quantitative",
+        "title": "Number of Deaths"
+      }
+    ]
   },
-
-
-
-  
   "layer": [
     {
       "selection": {"brush": {"type": "interval", "encodings": ["x"]}},
       "mark": {"type": "area"}
     },
-
-
-
-
-
-    
     {
       "transform": [{"filter": {"selection": "brush"}}],
       "mark": {"type": "area", "color": "#ff8080", "opacity": 1}
     }
-
-
-
-
-
-
-    
   ]
 }
