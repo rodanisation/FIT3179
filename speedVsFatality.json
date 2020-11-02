@@ -28,6 +28,5 @@
       "scale": {"nice": false}
     },
     "tooltip": [{"field": "Speed Zone (km/hr)"}, {"field": "Fatality"}]
-  },
-  "config": {}
+  }
 }
